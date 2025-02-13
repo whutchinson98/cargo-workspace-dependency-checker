@@ -1,0 +1,18 @@
+[package]
+name = "cargo-workspace-dependency-checker"
+version = "0.0.0"
+edition = "2021"
+authors = ["whutchinson98"]
+include = ["src/**/*.rs"]
+categories = ["command-line-utilities"]
+homepage = "https://github.com/whutchinson98/cargo-workspace-dependency-checker"
+repository = "https://github.com/whutchinson98/cargo-workspace-dependency-checker"
+license = "MIT"
+readme = "README.md"
+keywords = ["cli", "tool", "cargo", "workspace", "dependency"]
+
+[dependencies]
+serde = { version = "1.0.217", features = ["derive"] }
+toml = "0.8.20"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
