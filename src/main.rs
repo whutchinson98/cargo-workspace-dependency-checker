@@ -6,8 +6,13 @@ use cargo_toml::CargoToml;
 pub static CARGO_TOML: &str = "Cargo.toml";
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    // TODO: I should probably configure this to be able to take an arbitrary path
-    let root_toml_file_path = std::env::current_dir()?.join(CARGO_TOML);
+    let root_toml_file_path = if std::env::args().len() == 2 {
+        let path: String = std::env::args().nth(1).unwrap();
+        std::path::PathBuf::from(path).join(CARGO_TOML)
+    } else {
+        std::env::current_dir()?.join(CARGO_TOML)
+    };
+
     let root_toml = load_cargo_toml(root_toml_file_path)?;
     println!("Cargo.toml found");
 
