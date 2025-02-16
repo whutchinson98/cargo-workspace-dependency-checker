@@ -10,6 +10,7 @@ repository = "https://github.com/whutchinson98/cargo-workspace-dependency-checke
 license = "MIT"
 readme = "README.md"
 keywords = ["cli", "tool", "cargo", "workspace", "dependency"]
+description = "A tool to check for duplicate dependencies that are not workspace dependencies."
 
 [dependencies]
 anyhow = "1.0.95"
