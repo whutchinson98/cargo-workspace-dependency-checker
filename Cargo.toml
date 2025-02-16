@@ -1,6 +1,6 @@
 [package]
 name = "cargo-workspace-dependency-checker"
-version = "0.0.0"
+version = "1.0.0"
 edition = "2021"
 authors = ["whutchinson98"]
 include = ["src/**/*.rs"]
@@ -12,6 +12,7 @@ readme = "README.md"
 keywords = ["cli", "tool", "cargo", "workspace", "dependency"]
 
 [dependencies]
+anyhow = "1.0.95"
 serde = { version = "1.0.217", features = ["derive"] }
 toml = "0.8.20"
 tracing = "0.1.41"
