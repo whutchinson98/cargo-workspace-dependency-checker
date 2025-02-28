@@ -1,6 +1,6 @@
 [package]
 name = "cargo-workspace-dependency-checker"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 authors = ["whutchinson98"]
 include = ["src/**/*.rs"]
@@ -13,8 +13,8 @@ keywords = ["cli", "tool", "cargo", "workspace", "dependency"]
 description = "A tool to check for duplicate dependencies that are not workspace dependencies."
 
 [dependencies]
-anyhow = "1.0.95"
-serde = { version = "1.0.217", features = ["derive"] }
+anyhow = "1.0.96"
+serde = { version = "1.0.218", features = ["derive"] }
 toml = "0.8.20"
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
