@@ -10,8 +10,6 @@ fn main() -> anyhow::Result<()> {
 
     let root_toml = load_cargo_toml(root_toml_file_path)?;
 
-    println!("Cargo.toml found");
-
     match root_toml.workspace {
         Some(workspace) => {
             let duplicate_dependencies = workspace.find_duplicate_dependencies()?;
